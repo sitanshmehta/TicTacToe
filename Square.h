@@ -9,11 +9,11 @@
 
 class Square {
 private:
-    char val;
+    Player val;
 public:
     Square();
-    Square(char val_m); //should i pass a player char through this function?
-    char getVal();
+    Square(Player val_m); //should i pass a player char through this function?
+    Player getVal();
 };
 
 

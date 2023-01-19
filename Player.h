@@ -14,8 +14,13 @@ class Player {
 private:
     player playerX;
     player playerY;
+    player dummy;
 public:
-    Player();
+    Player(char X, char O, char dummy_m);
+    Player get_x();
+    Player get_O();
+    Player get_dummy();
+
 
 
 
