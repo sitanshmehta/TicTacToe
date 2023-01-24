@@ -19,7 +19,11 @@ class Game {
 private:
     Square board[SIZE][SIZE];
     GameState state;
+    Player player_X;
+    Player player_Y;
+    Player dummy;
 public:
+    Game(Player player_X, Player player_O, Player dummy);
     void play();
 private:
     void printBoard();

@@ -8,7 +8,9 @@
 
 #include<cstdlib>
 #include<iostream>
+Game::Game(Player player_X, Player player_O) {
 
+}
 void Game::printBoard() {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
@@ -27,17 +29,20 @@ Square Game::getValue() {
 }
 
 void Game::switchPlayer() {
-
+    if(!isBoardFull()){
+        if(player_X)
+    }
+    else std::cout << "Game over" << std::endl;
 }
 
 bool Game::isBoardFull() {
-    /*for(int i = 0; i < SIZE; i++){
+    for(int i = 0; i < SIZE; i++){
         for(int j = 0; j < SIZE; j++){
             if(board[i][j].getVal() == ' '){
                 return false;
             }
         }
-    }*/
+    }
 }
 
 void Game::getPlayerMove(Player val) {

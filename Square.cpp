@@ -6,12 +6,12 @@
 #include "Player.h"
 
 Square::Square() {
-    //val =  get_dummy();
+    val = ' ';
 }
-Square::Square(Player val_m) {
+Square::Square(char val_m) { //use operator overloading
     val = val_m;
 }
 
-Player Square::getVal() {
+char Square::getVal() {
     return val;
 }

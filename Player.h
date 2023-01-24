@@ -4,26 +4,22 @@
 
 #ifndef TICTACTOE_PLAYER_H
 #define TICTACTOE_PLAYER_H
-
+#include <string>
+#include <iostream>
 typedef struct player{
+    std::string name;
     char val;
     bool winner;
     bool playing;
 };
 class Player {
+    friend class Square;
 private:
-    player playerX;
-    player playerY;
-    player dummy;
+    player player;
 public:
-    Player(char X, char O, char dummy_m);
-    Player get_x();
-    Player get_O();
-    Player get_dummy();
-
-
-
-
+    Player(char val);
+    char get_val();
+    bool isWinner();
 
 };
 

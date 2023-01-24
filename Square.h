@@ -8,12 +8,13 @@
 
 
 class Square {
+    friend class Player;
 private:
-    Player val;
+    char val;
 public:
     Square();
-    Square(Player val_m); //should i pass a player char through this function?
-    Player getVal();
+    Square(char val_m); //should i pass a player char through this function?
+    char getVal();
 };
 
 
