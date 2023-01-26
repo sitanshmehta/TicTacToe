@@ -8,7 +8,10 @@
 
 #include<cstdlib>
 #include<iostream>
-Game::Game(Player player_X, Player player_O) {
+Game::Game() {
+    state = IN_PROGRESS;
+    player_X.set_val('x');
+    player_O.set_val('O');
 
 }
 void Game::printBoard() {
@@ -30,7 +33,15 @@ Square Game::getValue() {
 
 void Game::switchPlayer() {
     if(!isBoardFull()){
-        if(player_X)
+        //If X just played, set X's playing to false and then O's playing to true so that O can play.
+        if(player_X.isPlaying()){
+            player_O.set_playing(true);
+            player_X.set_playing(false);
+        }
+        else if(player_O.isPlaying()){
+            player_X.set_playing(true);
+            player_O.set_playing(false);
+        }
     }
     else std::cout << "Game over" << std::endl;
 }
@@ -50,7 +61,11 @@ void Game::getPlayerMove(Player val) {
 }
 
 void Game::getCoordinate(int &x, int &y) {
-
+    std::cout << "Enter Row and Col" << std::endl;
+    std::cin >> x >> y;
+    if(validMove(x,y)){
+        //board[x][y] = player
+    }
 }
 
 bool Game::validMove(int x, int y) {

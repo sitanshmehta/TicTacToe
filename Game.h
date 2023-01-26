@@ -10,20 +10,20 @@
 const int SIZE = 3;
 
 enum GameState{
-    IN_PROGRESS;
-    X_WON;
-    O_WON;
-    TIE;
+    IN_PROGRESS,
+    X_WON,
+    O_WON,
+    TIE
 };
 class Game {
 private:
     Square board[SIZE][SIZE];
     GameState state;
     Player player_X;
-    Player player_Y;
+    Player player_O;
     Player dummy;
 public:
-    Game(Player player_X, Player player_O, Player dummy);
+    Game();
     void play();
 private:
     void printBoard();

@@ -13,7 +13,8 @@ private:
     char val;
 public:
     Square();
-    Square(char val_m); //should i pass a player char through this function?
+    //Square(char val_m); //should i pass a player char through this function?
+    void set_val(char player_val);
     char getVal();
 };
 

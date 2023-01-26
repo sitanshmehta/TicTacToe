@@ -7,7 +7,7 @@
 #include <string>
 #include <iostream>
 typedef struct player{
-    std::string name;
+    //std::string name;
     char val;
     bool winner;
     bool playing;
@@ -17,8 +17,12 @@ class Player {
 private:
     player player;
 public:
-    Player(char val);
+    Player();
+    //Player(char val_m);
+    void set_val(char val_m);
+    void set_playing(bool playing_m);
     char get_val();
+    bool isPlaying();
     bool isWinner();
 
 };
